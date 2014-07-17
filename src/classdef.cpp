@@ -2199,9 +2199,9 @@ void ClassDef::writeMemberList(OutputList &ol)
   ol.disableAllBut(OutputGenerator::Html);
 
   QCString memListFile = getMemberListFileName();
-  startFile(ol,memListFile,memListFile,theTranslator->trMemberList(),
+    startFile(ol,memListFile,memListFile,displayName() + " " +theTranslator->trMemberList(),
             HLI_ClassVisible,!generateTreeView,getOutputFileBase());
-  if (!generateTreeView)
+ if (!generateTreeView)
   {
     if (getOuterScope()!=Doxygen::globalScope)
     {
